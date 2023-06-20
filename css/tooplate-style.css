@@ -556,16 +556,13 @@ footer {
     padding: 0;
 }
 
-#pricing .col-md-4:last-child .pricing-thumb {
-    border-right: 0;
-}
-
 .pricing-thumb {
     background: #ffffff;
     border-right: 2px solid #f0f0f0;
     padding: 20px 40px;
     border-radius: 5%;
     margin: 1%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-title {
