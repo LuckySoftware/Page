@@ -328,27 +328,27 @@
         <div class="container">
             <div class="row">
 
-                <form name="contact" method="POST" netlify>
-                    <p>
-                      <label>Your Name: <input type="text" name="name" /></label>
-                    </p>
-                    <p>
-                      <label>Your Email: <input type="email" name="email" /></label>
-                    </p>
-                    <p>
-                      <label>Your Role: <select name="role[]" multiple>
-                        <option value="leader">Leader</option>
-                        <option value="follower">Follower</option>
-                      </select></label>
-                    </p>
-                    <p>
-                      <label>Message: <textarea name="message"></textarea></label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form>
-                  
+                <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <form action="email.php" method="post">
+                        <div class="section-title">
+                            <h1>Contáctanos</h1>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <input type="text" class="form-control" placeholder="Nombre" name="name" required>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <input type="email" class="form-control" placeholder="Dirección Email" name="email" required>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <input type="submit" class="form-control" name="Send Message" value="Enviar Mensaje">
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <textarea class="form-control" rows="8" placeholder="Mensaje" name="message" required></textarea>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
@@ -391,28 +391,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
-
-    <script>
-        const handleSubmit = (event) => {
-            event.preventDefault();
-          
-            const myForm = event.target;
-            const formData = new FormData(myForm);
-            
-            fetch("/", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString(),
-            })
-              .then(() => console.log("Form successfully submitted"))
-              .catch((error) => alert(error));
-          };
-          
-          document
-            .querySelector("form")
-            .addEventListener("submit", handleSubmit);
-          
-    </script>
 
 </body>
 
