@@ -23,6 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   mail($destinatario, $asunto, $cuerpo, $headers);
 
   // Redirige al usuario después de enviar el correo
-  header("Location: formulario.html");
+  header("Location: index.html");
 }
 ?>
