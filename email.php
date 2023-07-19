@@ -12,12 +12,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Cuerpo del correo
   $cuerpo = "Nombre: $nombre\n";
-  $cuerpo .= "Email: $email\n";
-  $cuerpo .= "Mensaje: $mensaje\n";
+  $cuerpo = "Email: $email\n";
+  $cuerpo = "Mensaje: $mensaje\n";
 
   // Encabezados del correo
   $headers = "From: $email\r\n";
-  $headers .= "Reply-To: $email\r\n";
+  $headers = "Reply-To: $email\r\n";
 
   // Envía el correo
   mail($destinatario, $asunto, $cuerpo, $headers);
