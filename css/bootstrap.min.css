@@ -2190,6 +2190,13 @@ pre code {
     left: 100%
 }
 
+.logo img{
+    float: left;
+}
+.logo {
+    padding-left: 10px;
+}
+
 .col-xs-push-11 {
     left: 91.66666667%
 }
